@@ -1,6 +1,6 @@
 #!/bin/bash
 
-VERBOSE=1                      # print echov lines
+VERBOSE=0                      # print echov lines if VERBOSE == 1
 
 type cec-client &>/dev/null || { echo "cec-client is required"; exit; }
 
