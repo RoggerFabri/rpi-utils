@@ -16,6 +16,7 @@ while :; do
     if  filter_key "F2 (red)" "$l"; then
       {
         echov "Starting Kodi..."
+        ( speaker-test -t sine -c 2 -s 2 -f 800 & TASK_PID=$! ; sleep 0.10 ; kill -s SIGINT $TASK_PID ) > /dev/null
         kodi-standalone
         killall cec-client
       }
